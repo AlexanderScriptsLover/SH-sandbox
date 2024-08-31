@@ -10,7 +10,7 @@ if [ ! -d "$dir_path" ]; then
 
     # Check if the directory was created successfully
     if [ $? -ne 0 ]; then
-        echo "Unable to create the folder, please check your permissions or path." | tee -a "$dir_file"
+        echo "Unable to create the folder, please check your permissions or path." | >&2
         exit 1
     else
         echo "Folder created successfully." | tee -a "$dir_file"
